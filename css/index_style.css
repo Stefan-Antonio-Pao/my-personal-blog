@@ -1,0 +1,53 @@
+body{
+    /*
+    background-image: url("../img/cover1.jpg");
+    background-image: url("../img/cover2.jpeg");
+    background-image: url("../img/cover3.jpg");
+    */
+    background-color: rgba(0,0,0,0.4);
+    background-image: url("../img/cover3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-blend-mode: overlay;
+    /*height: calc(110vh + 60px);*/
+}
+main{
+    flex: 1;
+    margin-bottom: 10vh;
+}
+main div{
+    text-align: center;
+}
+
+#cover_head{
+    margin-bottom: 0;
+    padding-bottom: 0;
+    color: white;
+    text-align: center;
+    font-size: 200px;
+    letter-spacing: 0.06em;
+    font-family: 'Party LET', cursive;
+}
+main div p{
+    color: white;
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 36px;
+    letter-spacing: 0.01em;
+    font-weight: bold;
+}
+main div button{
+    padding: 5px 20px;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    letter-spacing: 0.01em;
+    background: none;
+    border: solid white 5px;
+    transition: 1s ease;
+}
+main div button:hover{
+    color: rgba(255, 185, 122, 0.99);
+    border-color: rgba(255, 185, 122, 0.99);
+}

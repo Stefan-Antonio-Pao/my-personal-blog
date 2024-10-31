@@ -5,12 +5,12 @@ body{
     background-image: url("../img/cover3.jpg");
     */
     background-color: rgba(0,0,0,0.4);
-    background-image: url("../img/toolbox1.png");
+    background-image: url("../img/album2.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     background-blend-mode: overlay;
-    height: calc(100vh + 1800px + 60px);
+    /*height: calc(100vh + 2000px + 60px);*/
     position: relative;
     display: flex;
     flex-direction: column;
@@ -20,7 +20,7 @@ main{
     flex-direction: column;
     flex: 1;
 }
-#tool_title{
+#album_title{
     display: flex;
     flex: 1;
     color: white;
@@ -28,14 +28,36 @@ main{
     justify-content: center;
     align-items: center;
 }
-#tool_title h1{
+#album_title h1{
     text-align: center;
     justify-content: center;
     align-items: center;
     font-family: "Times New Roman", Times, serif;
     font-size: 78px;
 }
-#tool_body{
+#album_body{
     height: auto;
-    min-height: 1800px;
+    /*max-height: 110vh;
+    min-height: 110vh;*/
+    background-color: rgba(0, 0, 0, 0.75);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 20px;
+}
+#album_lib{
+    overflow-y: visible;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 20px;
+    justify-content: center;
+}
+img{
+    width: 100%;
+    max-width: 360px;
+    height: auto;
 }

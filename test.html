@@ -3,49 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stefan's Blog</title>
-    <link href="css/font.css" rel="stylesheet">
-    <link href="css/common_style.css" rel="stylesheet">
-    <link href="css/index_style.css" rel="stylesheet">
-    <script src="js/index_interactive.js" defer></script>
-    <script src="js/index_body_adjust.js" defer></script>
+    <title>滚动页面示例</title>
+    <style>
+        /* 全局样式 */
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden; /* 禁用默认的滚动条 */
+        }
+
+        /* header 和 title 初始状态占据整个视口 */
+        header, #title {
+            height: 50vh; /* 各占屏幕高度的一半 */
+            width: 100%;
+        }
+
+        /* 不同的颜色用于区分部分 */
+        header {
+            background-color: lightcoral;
+        }
+
+        #title {
+            background-color: lightgoldenrodyellow;
+        }
+
+        /* main section 样式 */
+        main {
+            height: 100vh; /* 每次切换的目标区域高度为视口高度 */
+            width: 100%;
+            position: relative;
+        }
+
+        #section1, #section2, #section3 {
+            height: 50vh; /* 每个 section 占据屏幕的一半 */
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 3em;
+        }
+
+        #section1 { background-color: lightseagreen; }
+        #section2 { background-color: lightblue; }
+        #section3 { background-color: lightpink; }
+
+        footer {
+            background-color: lightgray;
+            height: 50vh; /* 占据屏幕的一半 */
+            width: 100%;
+            display: none; /* 初始状态下隐藏 */
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <div class="guide_link">
-            <a href="html/me.html">ABOUT ME</a>
-        </div>
-        <div class="guide_link">
-            <a href="html/campus.html">CAMPUS LIFE</a>
-        </div>
-        <div id="guide_title">
-            <a href="index.html">My Blog</a>
-        </div>
-        <div class="guide_link">
-            <a href="html/poem.html">A POEM</a>
-        </div>
-        <div class="guide_link">
-            <a href="html/album.html">PHOTO ALBUM</a>
-        </div>
-    </header>
-    <main>
-        <div style="margin-top: 10%; margin-bottom: 0">
-            <h1 id="cover_head">Hi, I'm Stefan</h1>
-        </div>
-        <div style="margin-top: 0">
-            <p>A common college student, exploring the path of his life.</p>
-        </div>
-        <div style="margin: 5% auto">
-            <button id="know_me_button">Get to know me</button>
-        </div>
-    </main>
-    <footer>
-        <address>
-            Created in October 2024 by Stefan Pao | Made in Wenzhou Kean University
-        </address>
-        <address>
-            This webpage draws inspiration and materials from the internet, intended solely for web programming learning purposes.
-        </address>
-    </footer>
+<header></header>
+<main>
+    <div id="title"></div>
+    <div id="section1"></div>
+    <div id="section2"></div>
+    <div id="section3"></div>
+</main>
+<footer></footer>
+<script>
+    let currentIndex = 0; // 当前显示的索引
+    const sections = ['title', 'section1', 'section2', 'section3']; // 各部分的 ID 列表
+    let isThrottled = false; // 节流标志位
+
+    function scrollToSection(index) {
+        if (index >= 0 && index < sections.length) {
+            currentIndex = index;
+            const currentSection = document.querySelector(`#${sections[index]}`);
+
+            // 滚动到目标 section
+            currentSection.scrollIntoView({ behavior: 'smooth' });
+
+            if (index === 0) {
+                // 显示 header 和 title
+                document.querySelector('header').style.display = 'block';
+                document.querySelector('#title').style.display = 'block';
+                // 隐藏 footer
+                document.querySelector('footer').style.display = 'none';
+            } else {
+                // 隐藏 header 和 title
+                document.querySelector('header').style.display = 'none';
+                document.querySelector('#title').style.display = 'none';
+                // 显示 footer 并将其定位在当前 section 下面
+                document.querySelector('footer').style.display = 'block';
+            }
+        }
+    }
+
+    window.addEventListener('wheel', (event) => {
+        if (isThrottled) return; // 如果正在节流，直接返回
+
+        // 根据滚动方向来增加或减少当前索引
+        if (event.deltaY > 0) {
+            // 向下滚动
+            scrollToSection(currentIndex + 1);
+        } else {
+            // 向上滚动
+            scrollToSection(currentIndex - 1);
+        }
+
+        // 设置节流，防止连续滚动触发
+        isThrottled = true;
+        setTimeout(() => {
+            isThrottled = false;
+        }, 1000); // 节流时间，可以根据需要调整
+    });
+</script>
 </body>
 </html>

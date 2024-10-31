@@ -1,0 +1,57 @@
+body{
+    /*
+    background-image: url("../img/cover1.jpg");
+    background-image: url("../img/cover2.jpeg");
+    background-image: url("../img/cover3.jpg");
+    */
+    background-color: rgba(0,0,0,0.4);
+    background-image: url("../img/campus1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-blend-mode: overlay;
+    /*height: calc(100vh + 100vh + 60px);*/
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    color: black;
+    overflow: hidden;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+#campus_title{
+    display: flex;
+    flex: 1;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+#campus_title h1{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 78px;
+}
+#campus_content{
+    display: flex;
+    flex-direction: column;
+    transition: 0.5s;
+}
+.campus_section{
+    background-color: rgba(255, 255, 255);
+    display: none;
+    flex-direction: column;
+}
+.campus_section h1{
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 40px;
+}
+#campus_1{
+    display: flex;
+}

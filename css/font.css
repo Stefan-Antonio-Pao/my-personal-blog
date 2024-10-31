@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'Party LET';
+    src: url('/fonts/PartyLET-plain.ttf');
+}
+@font-face {
+    font-family: 'Times New Roman';
+    src: url('/fonts/Times New Roman.ttf');
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'Times New Roman';
+    src: url('/fonts/Times New Roman Bold.ttf');
+    font-weight: bold;
+}
+@font-face {
+    font-family: 'Snell Roundhand';
+    src: url('/fonts/SnellRoundhand.ttc');
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Courier New';
+    src: url('/fonts/Courier New.ttf');
+    font-weight: normal;
+}

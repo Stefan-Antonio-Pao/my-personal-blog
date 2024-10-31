@@ -1,0 +1,108 @@
+*{
+    transition: 0.5s ease;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+header{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    /*background-color: rgba(211, 211, 211, 0.4);*/
+    flex-direction: row;
+    align-items: center;
+    flex: 0 1 auto;
+}
+@media (max-width: 850px) {
+    header{
+        flex-direction: column;
+    }
+    #guide_title{
+        width: 100%;
+        order: 1;
+    }
+    .guide_link{
+        order: 2;
+    }
+}
+.guide_link{
+    flex: 1;
+    padding: 10px;
+    color: white;
+    font-size: 18px;
+    font-family: "Times New Roman", Times, serif;
+    text-align: center;
+    align-items: center;
+}
+.guide_link a{
+    color: white;
+    text-decoration: none;
+    transition: 1s ease;
+}
+.guide_link a:hover{
+    /*font-size: 19px;*/
+    color: rgba(255, 185, 122, 0.99);
+}
+.guide_link:active{
+    text-decoration: underline;
+}
+.guide_link img{
+    height: 2em;
+    width: auto;
+}
+#guide_title{
+    flex: 0.75;
+    padding: 10px;
+    color: white;
+    text-align: center;
+    align-items: center;
+    text-decoration: none;
+    font-family: "Snell Roundhand", sans-serif;
+    font-size: 58px;
+    font-weight: bold;
+}
+#guide_title a{
+    color: white;
+    text-decoration: none;
+    letter-spacing: 0.04em;
+    transition: 1s ease;
+}
+#guide_title a:hover{
+    color: rgba(255, 185, 122, 0.99);
+}
+footer{
+    display: flex;
+    flex-direction: column;
+    min-height: 60px;
+    height: auto;
+    background-color: rgb(30, 30, 46);
+    align-items: center;
+    justify-content: center;
+}
+@media (max-width: 850px) {
+    footer{
+        font-size: 14px;
+    }
+}
+@media (max-width: 470px) {
+    footer{
+        font-size: 12px;
+    }
+}
+@media (max-width: 370px) {
+    footer{
+        font-size: 10px;
+    }
+}
+footer address{
+    text-align: center;
+    align-items: center;
+    color: white;
+    transition: 0.5s;
+}

@@ -1,0 +1,194 @@
+body{
+    /*
+    background-image: url("../img/cover1.jpg");
+    background-image: url("../img/cover2.jpeg");
+    background-image: url("../img/cover3.jpg");
+    */
+    background-color: rgba(0,0,0,0.4);
+    background-image: url("../img/me2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-blend-mode: overlay;
+    /*height: calc(100vh + 1800px + 60px);*/
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    color: black;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+main div{
+    display: flex;
+}
+#me_part1{
+    margin-bottom: 5%;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    overflow-y: auto;
+}
+#me_part1 h1{
+    color: white;
+    font-size: 78px;
+    text-align: center;
+    align-self: center;
+}
+#me_part2{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    /*min-height: 1800px;*/
+    height: auto;
+}
+#part2-1{
+    flex: 2;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+@media (max-width: 850px) {
+    #part2-1{
+        flex-direction: column;
+    }
+}
+#part2-1-1{
+    flex: 4.5;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+}
+#part2-1-1 img{
+    margin-top: 7.5%;
+    margin-bottom: 0;
+    border-radius: 50%;
+    max-width: 40%;
+    height: auto;
+    box-shadow: 3px 3px 10px #000;
+    transition: 0.6s ease;
+}
+#part2-1-1 h1{
+    font-family: 'Snell Roundhand', cursive;
+    font-size: 68px;
+    color: lightgray;
+    letter-spacing: 2px;
+    margin: 0;
+    transition: 0.6s ease;
+}
+#part2-1-1 p{
+    font-family: 'Times New Roman', cursive;
+    font-size: 22px;
+    margin: 0;
+    padding: 0 10%;
+    text-align: justify;
+    line-height: 2.25;
+    text-indent: 5%;
+}
+#part2-1-1-1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#part2-1-1-2{
+    width: 90%;
+    margin-top: 5%;
+    padding: 0 1%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+.overlay {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.5s ease;
+}
+#part2-1-1-2 p:hover{
+    z-index: 3;
+    /*(padding: 0.25% 3.75%;
+    font-size: 42px;*/
+    background-color: #fff8f4;
+    color: black;
+    border: none;
+    box-shadow: 0 0 10px antiquewhite, 15px 15px 10px #000;
+}
+#part2-1-1-2 p:not(:hover){
+    opacity: 0.1;
+}
+#part2-1-1-2:hover ~ .overlay {
+    opacity: 1;
+}
+#part2-1-1-2 p{
+    padding: 0.5% 3%;
+    background-color: white;
+    color: transparent;
+    border-radius: 0.75em;
+    font-family: 'Times New Roman', cursive;
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    transition: 0.5s;
+}
+#part2-1-2{
+    flex: 5.5;
+    height: 100%;
+    /*background-color: rgba(255, 185, 122, 0.99);*/
+    flex-direction: column;
+}
+#part2-1-2-1{
+    justify-content: center;
+    width: 100%;
+    background-color: rgba(255, 222, 173, 0.17);
+}
+#part2-1-2-2{
+    padding: 0 2.5%;
+    overflow: auto;
+    height: 100%;
+    max-height: 1400px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+
+}
+#part2-1-2-2{
+    padding: 2.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    background-color: rgba(255, 222, 173, 0.17);
+}
+#part2-2{
+    flex: 1;
+    width: 100%;
+    background-color: rgba(176, 196, 222, 0.08);
+    padding: 1.5% 2.5%;
+    display: flex;
+    flex-direction: column;
+}
+
+h1{
+    font-size: 38px
+}
