@@ -1,0 +1,41 @@
+body{
+    /*
+    background-image: url("../img/cover1.jpg");
+    background-image: url("../img/cover2.jpeg");
+    background-image: url("../img/cover3.jpg");
+    */
+    background-color: rgba(0,0,0,0.4);
+    background-image: url("../img/toolbox1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-blend-mode: overlay;
+    height: calc(100vh + 1800px + 60px);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+#tool_title{
+    display: flex;
+    flex: 1;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+#tool_title h1{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 78px;
+}
+#tool_body{
+    height: auto;
+    min-height: 1800px;
+}

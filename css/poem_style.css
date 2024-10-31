@@ -1,0 +1,65 @@
+body{
+    /*
+    background-image: url("../img/cover1.jpg");
+    background-image: url("../img/cover2.jpeg");
+    background-image: url("../img/cover3.jpg");
+    */
+    background-color: rgba(0,0,0,0.4);
+    background-image: url("../img/poem1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-blend-mode: overlay;
+    height: calc(110vh + 3300px + 60px);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+#poem_title{
+    display: flex;
+    flex: 1;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#poem_title h1{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 78px;
+}
+main h2{
+    font-family: 'Times New Roman', cursive;
+    font-style: normal;
+    font-weight: bold;
+    color: #b8b8b8;
+    letter-spacing: 2px;
+}
+main a{
+    color: white;
+    text-decoration: underline #b8b8b8;
+    transition: 1s;
+}
+main a:hover{
+    text-decoration: underline white;
+}
+#poem_body{
+    height: auto;
+    min-height: 3300px;
+    background-color: rgba(0,0,0,0.4);
+    padding: 2.5%;
+}
+main p{
+    text-align: center;
+    font-family: 'PartyLET-plain', cursive;
+    font-size: 24px;
+    color: white;
+}
