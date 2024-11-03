@@ -43,15 +43,85 @@ main{
     transition: 0.5s;
 }
 .campus_section{
-    background-color: rgba(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.4);
     display: none;
     flex-direction: column;
 }
 .campus_section h1{
+    color: white;
     text-align: center;
     font-family: "Times New Roman", Times, serif;
     font-size: 40px;
 }
 #campus_1{
     display: flex;
+}
+.filter_buttons{
+    text-align: center;
+    border-top: solid 1px white;
+    padding: 20px;
+    transition: 0.5s esae;
+}
+.filter_buttons button{
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 20px;
+}
+.filter_buttons button:hover{
+    color: rgba(255, 185, 122, 0.99);
+    text-decoration: underline rgba(255, 185, 122, 0.99);
+}
+.course_list{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 2em;
+    row-gap: 2em;
+    justify-content: center;
+    list-style-type: none;
+    color: white;
+    padding:0;
+}
+.course_list li{
+    font-weight: bold;
+    padding: 15px;
+    width: 300px;
+    height: 80px;
+    border-radius: 10px;
+    border: 1px solid white;
+    background-color: rgba(255, 255, 255, 0.1);
+    position: relative;
+}
+.course_list li h4{
+    display: inline-block;
+    margin: 4px 1px 0;
+    padding: 5px;
+    font-weight: normal;
+    position: absolute;
+    left: 10px;
+    bottom: 12px;
+    border-radius: 5px;
+}
+.course_doing{
+    border: 1px solid rgba(234, 174, 38, 1);
+    background-color: rgba(234, 174, 38, 0.1);
+    color: rgb(255, 190, 55);
+}
+.course_done{
+    border: 1px solid rgb(110, 234, 38);
+    background-color: rgba(110, 234, 38, 0.1);
+    color: rgb(128, 255, 55);
+}
+.course_unsatisfactory{
+    border: 1px solid rgb(228, 7, 7);
+    background-color: rgba(228, 7, 7, 0.1);
+    color: rgb(253, 60, 60);
+}
+.course_drop{
+    border: 1px solid rgb(170, 169, 169);
+    background-color: rgba(170, 169, 169, 0.1);
+    color: rgb(220, 219, 219);
+}
+.hidden{
+    display: none;
 }
